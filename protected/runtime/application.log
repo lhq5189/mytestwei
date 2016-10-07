@@ -1,0 +1,286 @@
+2016/07/26 11:22:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site2/index".' in D:\svn\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\svn\framework\web\CWebApplication.php(141): CWebApplication->runController('site2/index')
+#1 D:\svn\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\svn\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=http://weixin.hc.com/index.php?r=site2/index
+---
+2016/07/26 11:22:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site2/show".' in D:\svn\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\svn\framework\web\CWebApplication.php(141): CWebApplication->runController('site2/show')
+#1 D:\svn\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\svn\weixin\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=http://weixin.hc.com/index.php?r=site2/show
+---
+2016/07/26 15:44:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "show".' in D:\svn\framework\web\CController.php:483
+Stack trace:
+#0 D:\svn\framework\web\CController.php(270): CController->missingAction('show')
+#1 D:\svn\framework\web\CWebApplication.php(282): CController->run('show')
+#2 D:\svn\framework\web\CWebApplication.php(141): CWebApplication->runController('site2/show')
+#3 D:\svn\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\svn\weixin\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=http://weixin.hc.com/index.php?r=site2/show
+---
+2016/07/27 09:07:42 [error] [php] include(Weixin0.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/data/home/qxu1142010198/htdocs/framework/YiiBase.php:432)
+Stack trace:
+#0 /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php(146): spl_autoload_call()
+#1 /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php(25): Site2Controller->reponseMsg()
+#2 /data/home/qxu1142010198/htdocs/framework/web/actions/CInlineAction.php(49): Site2Controller->actionIndex()
+#3 /data/home/qxu1142010198/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /data/home/qxu1142010198/htdocs/framework/web/CController.php(286): Site2Controller->runAction()
+#5 /data/home/qxu1142010198/htdocs/framework/web/CController.php(265): Site2Controller->runActionWithFilters()
+#6 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(282): Site2Controller->run()
+#7 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /data/home/qxu1142010198/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /data/home/qxu1142010198/htdocs/weixin/index.php(13): CWebApplication->run()
+REQUEST_URI=/weixin/index.php?r=site2/index&signature=052db1dc9c9ec842581dd5824630f68409bf124b&timestamp=1469581661&nonce=827210559&openid=o6gWCuB5eYZCuIMevjEF5ax1OeJA
+in /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php (146)
+in /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php (25)
+in /data/home/qxu1142010198/htdocs/weixin/index.php (13)
+2016/07/27 09:07:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection.connectionString cannot be empty.' in /data/home/qxu1142010198/htdocs/framework/db/CDbConnection.php:370
+Stack trace:
+#0 /data/home/qxu1142010198/htdocs/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /data/home/qxu1142010198/htdocs/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /data/home/qxu1142010198/htdocs/framework/base/CModule.php(387): CDbConnection->init()
+#3 /data/home/qxu1142010198/htdocs/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /data/home/qxu1142010198/htdocs/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /data/home/qxu1142010198/htdocs/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /data/home/qxu1142010198/htdocs/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Weixin))
+#7 /data/home/qxu1142010198/htdocs/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php(146): CActiveRecord->__construct()
+#9 /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php(25): Site2Controller->reponseMsg()
+#10 /data/home/qxu1142010198/htdocs/framework/web/actions/CInlineAction.php(49): Site2Controller->actionIndex()
+#11 /data/home/qxu1142010198/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /data/home/qxu1142010198/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /data/home/qxu1142010198/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(282): CController->run('index')
+#15 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('site2/index')
+#16 /data/home/qxu1142010198/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /data/home/qxu1142010198/htdocs/weixin/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/weixin/index.php?r=site2/index&signature=a11ae8c1b84d5a4ef75f8a47f8de37455c624689&timestamp=1469581674&nonce=1918151893&openid=o6gWCuB5eYZCuIMevjEF5ax1OeJA
+---
+2016/07/27 09:08:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection.connectionString cannot be empty.' in /data/home/qxu1142010198/htdocs/framework/db/CDbConnection.php:370
+Stack trace:
+#0 /data/home/qxu1142010198/htdocs/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /data/home/qxu1142010198/htdocs/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /data/home/qxu1142010198/htdocs/framework/base/CModule.php(387): CDbConnection->init()
+#3 /data/home/qxu1142010198/htdocs/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /data/home/qxu1142010198/htdocs/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /data/home/qxu1142010198/htdocs/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /data/home/qxu1142010198/htdocs/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Weixin))
+#7 /data/home/qxu1142010198/htdocs/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php(146): CActiveRecord->__construct()
+#9 /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php(25): Site2Controller->reponseMsg()
+#10 /data/home/qxu1142010198/htdocs/framework/web/actions/CInlineAction.php(49): Site2Controller->actionIndex()
+#11 /data/home/qxu1142010198/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /data/home/qxu1142010198/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /data/home/qxu1142010198/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(282): CController->run('index')
+#15 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('site2/index')
+#16 /data/home/qxu1142010198/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /data/home/qxu1142010198/htdocs/weixin/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/weixin/index.php?r=site2/index&signature=a11ae8c1b84d5a4ef75f8a47f8de37455c624689&timestamp=1469581674&nonce=1918151893&openid=o6gWCuB5eYZCuIMevjEF5ax1OeJA
+---
+2016/07/27 09:08:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection.connectionString cannot be empty.' in /data/home/qxu1142010198/htdocs/framework/db/CDbConnection.php:370
+Stack trace:
+#0 /data/home/qxu1142010198/htdocs/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /data/home/qxu1142010198/htdocs/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /data/home/qxu1142010198/htdocs/framework/base/CModule.php(387): CDbConnection->init()
+#3 /data/home/qxu1142010198/htdocs/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /data/home/qxu1142010198/htdocs/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /data/home/qxu1142010198/htdocs/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /data/home/qxu1142010198/htdocs/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Weixin))
+#7 /data/home/qxu1142010198/htdocs/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php(146): CActiveRecord->__construct()
+#9 /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php(25): Site2Controller->reponseMsg()
+#10 /data/home/qxu1142010198/htdocs/framework/web/actions/CInlineAction.php(49): Site2Controller->actionIndex()
+#11 /data/home/qxu1142010198/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /data/home/qxu1142010198/htdocs/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /data/home/qxu1142010198/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(282): CController->run('index')
+#15 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('site2/index')
+#16 /data/home/qxu1142010198/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /data/home/qxu1142010198/htdocs/weixin/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/weixin/index.php?r=site2/index&signature=89c947ab296be792848681b61b974f9699d73a5c&timestamp=1469581680&nonce=32533440&openid=o6gWCuB5eYZCuIMevjEF5ax1OeJA
+---
+2016/07/27 09:21:45 [error] [php] Invalid argument supplied for foreach() (/data/home/qxu1142010198/htdocs/weixin/protected/models/Weixin.php:22)
+Stack trace:
+#0 /data/home/qxu1142010198/htdocs/framework/web/actions/CInlineAction.php(49): Site2Controller->actionIndex()
+#1 /data/home/qxu1142010198/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /data/home/qxu1142010198/htdocs/framework/web/CController.php(286): Site2Controller->runAction()
+#3 /data/home/qxu1142010198/htdocs/framework/web/CController.php(265): Site2Controller->runActionWithFilters()
+#4 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(282): Site2Controller->run()
+#5 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /data/home/qxu1142010198/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /data/home/qxu1142010198/htdocs/weixin/index.php(13): CWebApplication->run()
+REQUEST_URI=/weixin/index.php?r=site2/index&signature=52fba4cd590b9236c592a7715120a1a827358f42&timestamp=1469582504&nonce=518075251&openid=o6gWCuB5eYZCuIMevjEF5ax1OeJA
+in /data/home/qxu1142010198/htdocs/weixin/protected/models/Weixin.php (22)
+in /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php (119)
+in /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php (25)
+2016/07/27 09:21:53 [error] [php] Invalid argument supplied for foreach() (/data/home/qxu1142010198/htdocs/weixin/protected/models/Weixin.php:22)
+Stack trace:
+#0 /data/home/qxu1142010198/htdocs/framework/web/actions/CInlineAction.php(49): Site2Controller->actionIndex()
+#1 /data/home/qxu1142010198/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /data/home/qxu1142010198/htdocs/framework/web/CController.php(286): Site2Controller->runAction()
+#3 /data/home/qxu1142010198/htdocs/framework/web/CController.php(265): Site2Controller->runActionWithFilters()
+#4 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(282): Site2Controller->run()
+#5 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /data/home/qxu1142010198/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /data/home/qxu1142010198/htdocs/weixin/index.php(13): CWebApplication->run()
+REQUEST_URI=/weixin/index.php?r=site2/index&signature=ac62aa11b24717272a34f9aebc063c710efad3d3&timestamp=1469582512&nonce=1334054201&openid=o6gWCuB5eYZCuIMevjEF5ax1OeJA
+in /data/home/qxu1142010198/htdocs/weixin/protected/models/Weixin.php (22)
+in /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php (119)
+in /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php (25)
+2016/07/27 09:22:02 [error] [php] Invalid argument supplied for foreach() (/data/home/qxu1142010198/htdocs/weixin/protected/models/Weixin.php:22)
+Stack trace:
+#0 /data/home/qxu1142010198/htdocs/framework/web/actions/CInlineAction.php(49): Site2Controller->actionIndex()
+#1 /data/home/qxu1142010198/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /data/home/qxu1142010198/htdocs/framework/web/CController.php(286): Site2Controller->runAction()
+#3 /data/home/qxu1142010198/htdocs/framework/web/CController.php(265): Site2Controller->runActionWithFilters()
+#4 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(282): Site2Controller->run()
+#5 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /data/home/qxu1142010198/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /data/home/qxu1142010198/htdocs/weixin/index.php(13): CWebApplication->run()
+REQUEST_URI=/weixin/index.php?r=site2/index&signature=e442d8e1213d51d95e0f23924ae89b42c82441a2&timestamp=1469582521&nonce=1402405687&openid=o6gWCuB5eYZCuIMevjEF5ax1OeJA
+in /data/home/qxu1142010198/htdocs/weixin/protected/models/Weixin.php (22)
+in /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php (119)
+in /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php (25)
+2016/07/27 09:22:04 [error] [php] Invalid argument supplied for foreach() (/data/home/qxu1142010198/htdocs/weixin/protected/models/Weixin.php:22)
+Stack trace:
+#0 /data/home/qxu1142010198/htdocs/framework/web/actions/CInlineAction.php(49): Site2Controller->actionIndex()
+#1 /data/home/qxu1142010198/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /data/home/qxu1142010198/htdocs/framework/web/CController.php(286): Site2Controller->runAction()
+#3 /data/home/qxu1142010198/htdocs/framework/web/CController.php(265): Site2Controller->runActionWithFilters()
+#4 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(282): Site2Controller->run()
+#5 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /data/home/qxu1142010198/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /data/home/qxu1142010198/htdocs/weixin/index.php(13): CWebApplication->run()
+REQUEST_URI=/weixin/index.php?r=site2/index&signature=fc6dfcf735f6826f3a0141762bbe2426214f238b&timestamp=1469582523&nonce=806974160&openid=o6gWCuB5eYZCuIMevjEF5ax1OeJA
+in /data/home/qxu1142010198/htdocs/weixin/protected/models/Weixin.php (22)
+in /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php (119)
+in /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php (25)
+2016/07/27 09:22:06 [error] [php] Invalid argument supplied for foreach() (/data/home/qxu1142010198/htdocs/weixin/protected/models/Weixin.php:22)
+Stack trace:
+#0 /data/home/qxu1142010198/htdocs/framework/web/actions/CInlineAction.php(49): Site2Controller->actionIndex()
+#1 /data/home/qxu1142010198/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /data/home/qxu1142010198/htdocs/framework/web/CController.php(286): Site2Controller->runAction()
+#3 /data/home/qxu1142010198/htdocs/framework/web/CController.php(265): Site2Controller->runActionWithFilters()
+#4 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(282): Site2Controller->run()
+#5 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /data/home/qxu1142010198/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /data/home/qxu1142010198/htdocs/weixin/index.php(13): CWebApplication->run()
+REQUEST_URI=/weixin/index.php?r=site2/index&signature=922dd5e7e0150e66590013f4df1be3bb27950f51&timestamp=1469582525&nonce=1465046686&openid=o6gWCuB5eYZCuIMevjEF5ax1OeJA
+in /data/home/qxu1142010198/htdocs/weixin/protected/models/Weixin.php (22)
+in /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php (119)
+in /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php (25)
+2016/07/27 09:51:38 [error] [php] Wrong parameter count for curl_setopt() (/data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php:118)
+Stack trace:
+#0 /data/home/qxu1142010198/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /data/home/qxu1142010198/htdocs/framework/web/CController.php(286): Site2Controller->runAction()
+#2 /data/home/qxu1142010198/htdocs/framework/web/CController.php(265): Site2Controller->runActionWithFilters()
+#3 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(282): Site2Controller->run()
+#4 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /data/home/qxu1142010198/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /data/home/qxu1142010198/htdocs/weixin/index.php(13): CWebApplication->run()
+REQUEST_URI=/weixin/index.php?r=site2/test
+in /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php (118)
+in /data/home/qxu1142010198/htdocs/weixin/index.php (13)
+2016/07/27 14:25:04 [error] [php] curl_errno(): 26 is not a valid cURL handle resource (/data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php:119)
+Stack trace:
+#0 /data/home/qxu1142010198/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /data/home/qxu1142010198/htdocs/framework/web/CController.php(286): Site2Controller->runAction()
+#2 /data/home/qxu1142010198/htdocs/framework/web/CController.php(265): Site2Controller->runActionWithFilters()
+#3 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(282): Site2Controller->run()
+#4 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /data/home/qxu1142010198/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /data/home/qxu1142010198/htdocs/weixin/index.php(13): CWebApplication->run()
+REQUEST_URI=/weixin/index.php?r=site2/GetAccessToken
+in /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php (119)
+in /data/home/qxu1142010198/htdocs/weixin/index.php (13)
+2016/07/27 14:25:21 [error] [php] curl_errno(): 26 is not a valid cURL handle resource (/data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php:119)
+Stack trace:
+#0 /data/home/qxu1142010198/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /data/home/qxu1142010198/htdocs/framework/web/CController.php(286): Site2Controller->runAction()
+#2 /data/home/qxu1142010198/htdocs/framework/web/CController.php(265): Site2Controller->runActionWithFilters()
+#3 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(282): Site2Controller->run()
+#4 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /data/home/qxu1142010198/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /data/home/qxu1142010198/htdocs/weixin/index.php(13): CWebApplication->run()
+REQUEST_URI=/weixin/index.php?r=site2/GetAccessToken
+in /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php (119)
+in /data/home/qxu1142010198/htdocs/weixin/index.php (13)
+2016/07/27 14:50:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getwxserverip".' in /data/home/qxu1142010198/htdocs/framework/web/CController.php:483
+Stack trace:
+#0 /data/home/qxu1142010198/htdocs/framework/web/CController.php(270): CController->missingAction('getwxserverip')
+#1 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(282): CController->run('getwxserverip')
+#2 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('site2/getwxserv...')
+#3 /data/home/qxu1142010198/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /data/home/qxu1142010198/htdocs/weixin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/weixin/index.php?r=site2/getwxserverip
+---
+2016/07/27 14:51:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "GetWxServerIp".' in /data/home/qxu1142010198/htdocs/framework/web/CController.php:483
+Stack trace:
+#0 /data/home/qxu1142010198/htdocs/framework/web/CController.php(270): CController->missingAction('GetWxServerIp')
+#1 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(282): CController->run('GetWxServerIp')
+#2 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('site2/GetWxServ...')
+#3 /data/home/qxu1142010198/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /data/home/qxu1142010198/htdocs/weixin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/weixin/index.php?r=site2/GetWxServerIp
+---
+2016/07/27 15:00:08 [error] [php] Wrong parameter count for curl_setopt() (/data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php:132)
+Stack trace:
+#0 /data/home/qxu1142010198/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /data/home/qxu1142010198/htdocs/framework/web/CController.php(286): Site2Controller->runAction()
+#2 /data/home/qxu1142010198/htdocs/framework/web/CController.php(265): Site2Controller->runActionWithFilters()
+#3 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(282): Site2Controller->run()
+#4 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /data/home/qxu1142010198/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /data/home/qxu1142010198/htdocs/weixin/index.php(13): CWebApplication->run()
+REQUEST_URI=/weixin/index.php?r=site2/GetWxServerIp
+in /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php (132)
+in /data/home/qxu1142010198/htdocs/weixin/index.php (13)
+2016/07/27 15:00:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "GetAccessToken".' in /data/home/qxu1142010198/htdocs/framework/web/CController.php:483
+Stack trace:
+#0 /data/home/qxu1142010198/htdocs/framework/web/CController.php(270): CController->missingAction('GetAccessToken')
+#1 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(282): CController->run('GetAccessToken')
+#2 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('site2/GetAccess...')
+#3 /data/home/qxu1142010198/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /data/home/qxu1142010198/htdocs/weixin/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/weixin/index.php?r=site2/GetAccessToken
+---
+2016/07/27 15:00:57 [error] [php] Wrong parameter count for curl_setopt() (/data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php:132)
+Stack trace:
+#0 /data/home/qxu1142010198/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /data/home/qxu1142010198/htdocs/framework/web/CController.php(286): Site2Controller->runAction()
+#2 /data/home/qxu1142010198/htdocs/framework/web/CController.php(265): Site2Controller->runActionWithFilters()
+#3 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(282): Site2Controller->run()
+#4 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /data/home/qxu1142010198/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /data/home/qxu1142010198/htdocs/weixin/index.php(13): CWebApplication->run()
+REQUEST_URI=/weixin/index.php?r=site2/GetWxServerIP
+in /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php (132)
+in /data/home/qxu1142010198/htdocs/weixin/index.php (13)
+2016/07/27 17:40:18 [error] [php] curl_errno(): 27 is not a valid cURL handle resource (/data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php:177)
+Stack trace:
+#0 /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php(207): Site2Controller->actionGetAccessToken()
+#1 /data/home/qxu1142010198/htdocs/framework/web/actions/CInlineAction.php(49): Site2Controller->actionDefinedItem()
+#2 /data/home/qxu1142010198/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /data/home/qxu1142010198/htdocs/framework/web/CController.php(286): Site2Controller->runAction()
+#4 /data/home/qxu1142010198/htdocs/framework/web/CController.php(265): Site2Controller->runActionWithFilters()
+#5 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(282): Site2Controller->run()
+#6 /data/home/qxu1142010198/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /data/home/qxu1142010198/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /data/home/qxu1142010198/htdocs/weixin/index.php(13): CWebApplication->run()
+REQUEST_URI=/weixin/index.php?r=site2/defineditem
+in /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php (177)
+in /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php (195)
+in /data/home/qxu1142010198/htdocs/weixin/protected/controllers/Site2Controller.php (207)
